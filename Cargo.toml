@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["Aakash Kargathara"]
 description = "A causality-first programming language with explicit state tracking and logical time."
 license = "MIT"
-repository = "https://github.com/aakashkargathara/skyhetu"
+repository = "https://github.com/Kargatharaakash/skyhetu"
 keywords = ["programming-language", "compiler", "causality", "vm"]
 categories = ["development-tools", "compilers"]
 
