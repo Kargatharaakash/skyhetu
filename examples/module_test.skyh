@@ -1,0 +1,9 @@
+// Test module syntax parsing
+
+export fn greet(name) {
+    print("Hello, " + name)
+}
+
+export let VERSION = "1.0.0"
+
+greet("World")

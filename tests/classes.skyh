@@ -1,0 +1,29 @@
+class Greeter {
+    init(name) {
+        this.name = name
+    }
+    
+    greet() {
+        print("Hello " + this.name + "!")
+    }
+}
+
+let g = Greeter("World")
+g.greet()
+
+g.name = "SkyHetu"
+g.greet()
+
+class Adder {
+    init(val) {
+        this.val = val
+    }
+    add(n) {
+        this.val = this.val + n
+        return this.val
+    }
+}
+
+let a = Adder(10)
+print(a.add(5))
+print(a.val)

@@ -1,0 +1,29 @@
+// Hello World in SkyHetu
+// A simple demonstration of the language
+
+// Immutable binding
+let greeting = "Hello, SkyHetu!"
+print(greeting)
+
+// Basic arithmetic
+let x = 10
+let y = 20
+let sum = x + y
+print("Sum:", sum)
+
+// String operations
+let name = "World"
+print("Hello, " + name + "!")
+
+// Boolean logic
+let is_cool = true
+if is_cool {
+    print("SkyHetu is cool!")
+}
+
+// Function definition
+fn greet(person) {
+    return "Welcome, " + person + "!"
+}
+
+print(greet("Developer"))

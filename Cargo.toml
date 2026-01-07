@@ -1,0 +1,16 @@
+[package]
+name = "skyhetu"
+version = "0.2.0"
+edition = "2021"
+authors = ["Aakash Kargathara"]
+description = "A causality-first programming language with explicit state tracking and logical time."
+license = "MIT"
+repository = "https://github.com/aakashkargathara/skyhetu"
+keywords = ["programming-language", "compiler", "causality", "vm"]
+categories = ["development-tools", "compilers"]
+
+[dependencies]
+rustyline = "15"
+colored = "2"
+
+[dev-dependencies]

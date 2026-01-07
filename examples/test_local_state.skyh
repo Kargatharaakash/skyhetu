@@ -1,0 +1,13 @@
+fn test_local_state() {
+    state x = 10
+    x -> x + 5
+    return x
+}
+
+print("Local State Test:")
+print(test_local_state())
+
+state global_x = 100
+global_x -> global_x + 50
+print("Global State Test:")
+print(global_x)

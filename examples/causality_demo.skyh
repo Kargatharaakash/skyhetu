@@ -1,0 +1,42 @@
+// causality_demo.skyh - Enhanced causality features demo
+// Demonstrates causal_graph(), transitions(), and snapshot()
+
+print("=== Enhanced Causality Demo ===")
+print("")
+
+// Create some state with mutations
+state counter = 0
+state score = 100
+
+// Perform mutations
+counter -> counter + 1
+counter -> counter + 1
+counter -> counter + 1
+
+score -> score - 10
+score -> score - 20
+
+print("Final values:")
+print("  counter =", counter)
+print("  score =", score)
+
+print("")
+print("=== Mutation Counts ===")
+print("  counter transitions:", transitions("counter"))
+print("  score transitions:", transitions("score"))
+
+print("")
+print("=== Causal Graph (DOT format) ===")
+print(causal_graph("counter", "dot"))
+
+print("")
+print("=== Causal Graph (JSON format) ===")
+print(causal_graph("counter", "json"))
+
+print("")
+print("=== Current Snapshot ===")
+print("  Logical time:", snapshot())
+
+print("")
+print("=== Traditional why() ===")
+why(counter)

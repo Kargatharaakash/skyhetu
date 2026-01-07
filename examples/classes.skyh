@@ -1,0 +1,38 @@
+// classes.skyh - Demonstrating stateful records
+// SkyHetu classes are NOT traditional OOP
+// They are stateful records with attached closures
+
+class Account {
+    init(name, balance) {
+        this.name = name
+        this.balance = balance
+    }
+    
+    deposit(amount) {
+        this.balance = this.balance + amount
+        return this.balance
+    }
+    
+    withdraw(amount) {
+        if amount > this.balance {
+            print("Insufficient funds!")
+            return this.balance
+        }
+        this.balance = this.balance - amount
+        return this.balance
+    }
+    
+    status() {
+        print(this.name + ": $" + str(this.balance))
+    }
+}
+
+let alice = Account("Alice", 100)
+let bob = Account("Bob", 50)
+
+alice.deposit(50)
+bob.deposit(25)
+alice.withdraw(30)
+
+alice.status()  // Alice: $120
+bob.status()    // Bob: $75

@@ -1,0 +1,85 @@
+// Advanced Features Demo in SkyHetu
+// Demonstrates functions, recursion, and control flow
+
+print("=== SkyHetu Advanced Features ===\n")
+
+// 1. Recursive Functions
+print("--- Fibonacci (Recursion) ---")
+fn fib(n) {
+    if n <= 1 {
+        return n
+    }
+    return fib(n - 1) + fib(n - 2)
+}
+
+print("fib(0) =", fib(0))
+print("fib(1) =", fib(1))
+print("fib(5) =", fib(5))
+print("fib(10) =", fib(10))
+
+// 2. Higher-order functions (functions as values)
+print("\n--- Functions as Values ---")
+fn apply_twice(f, x) {
+    return f(f(x))
+}
+
+fn double(n) {
+    return n * 2
+}
+
+print("double(5) =", double(5))
+print("apply_twice(double, 5) =", apply_twice(double, 5))
+
+// 3. Closures
+print("\n--- Closures ---")
+fn make_counter() {
+    state count = 0
+    fn increment() {
+        count -> count + 1
+        return count
+    }
+    return increment
+}
+
+// Note: closures capture their environment
+
+// 4. Factorial
+print("\n--- Factorial ---")
+fn factorial(n) {
+    if n <= 1 {
+        return 1
+    }
+    return n * factorial(n - 1)
+}
+
+print("5! =", factorial(5))
+print("10! =", factorial(10))
+
+// 5. For loops with range
+print("\n--- For Loops ---")
+state sum = 0
+for i in range(1, 11) {
+    sum -> sum + i
+}
+print("Sum of 1 to 10:", sum)
+
+// 6. String operations
+print("\n--- Strings ---")
+let message = "SkyHetu"
+print("Length of", message, "is", len(message))
+print("Repeated:", message * 3)
+
+// 7. Type introspection
+print("\n--- Types ---")
+print("type(42) =", type(42))
+print("type(\"hello\") =", type("hello"))
+print("type(true) =", type(true))
+print("type(nil) =", type(nil))
+
+// 8. Assert for testing
+print("\n--- Assertions ---")
+assert(1 + 1 == 2, "Basic math should work")
+assert(fib(10) == 55, "Fibonacci should be correct")
+print("All assertions passed!")
+
+print("\n=== Demo Complete ===")

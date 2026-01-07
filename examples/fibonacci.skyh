@@ -1,0 +1,20 @@
+// fibonacci.skyh - Functional programming example
+// Demonstrating recursion and for-loops
+
+fn fib(n) {
+    if n <= 1 {
+        return n
+    }
+    return fib(n - 1) + fib(n - 2)
+}
+
+// Calculate first 10 fibonacci numbers using for-loop
+print("=== Fibonacci Sequence ===")
+for i in range(10) {
+    print("fib(" + str(i) + ") = " + str(fib(i)))
+}
+
+print("")
+print("=== Testing larger values ===")
+print("fib(15) = " + str(fib(15)))
+print("fib(20) = " + str(fib(20)))

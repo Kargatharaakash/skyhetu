@@ -1,0 +1,37 @@
+// state_machine.skyh - Explicit state transitions
+// SkyHetu makes state changes visible and traceable
+
+state status = "idle"
+state score = 0
+
+fn start_game() {
+    status -> "playing"
+    print("Game started!")
+}
+
+fn win_point() {
+    if status == "playing" {
+        score -> score + 10
+        print("Score: " + str(score))
+        
+        if score >= 30 {
+            status -> "won"
+            print("You win!")
+        }
+    }
+}
+
+fn game_over() {
+    status -> "ended"
+    print("Final score: " + str(score))
+    print("")
+    print("=== Causality Chain ===")
+    why(score)
+}
+
+// Play the game
+start_game()
+win_point()
+win_point()
+win_point()
+game_over()

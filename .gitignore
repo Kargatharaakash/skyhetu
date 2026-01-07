@@ -1,0 +1,19 @@
+# Rust / Cargo
+target/
+Cargo.lock
+
+# IDEs / Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Legacy / Junk
+src/metadata_strings.txt
+tests/*.sky
+
+# OS generated
+.DS_Store
+.AppleDouble
+.LSOverride

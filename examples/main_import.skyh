@@ -1,0 +1,7 @@
+// main_import.skyh - Tests importing from math module
+import { add, multiply, PI } from "math"
+
+print("Testing imports from math module:")
+print("add(2, 3) =", add(2, 3))
+print("multiply(4, 5) =", multiply(4, 5))
+print("PI =", PI)

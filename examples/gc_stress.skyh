@@ -1,0 +1,20 @@
+
+state i = 0
+state start_time = time()
+
+print("Starting GC stress test...")
+
+while i < 10000 {
+    // Allocation junk
+    let s = "some string " + i
+    let arr = range(0, 5)
+    
+    // Periodically print
+    if i % 1000 == 0 {
+        print("Iteration: " + i)
+    }
+    
+    i -> i + 1
+}
+
+print("Finished stress test.")

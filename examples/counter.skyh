@@ -1,0 +1,40 @@
+// Counter Example in SkyHetu
+// Demonstrates state tracking and causality
+
+print("=== State Tracking Demo ===")
+
+// Create mutable state with 'state' keyword
+state counter = 0
+print("Initial counter:", counter)
+
+// State transitions use the -> operator
+// Each transition is automatically tracked!
+counter -> counter + 1
+print("After +1:", counter)
+
+counter -> counter + 1
+print("After +1:", counter)
+
+counter -> counter * 2
+print("After *2:", counter)
+
+counter -> counter - 1
+print("After -1:", counter)
+
+// The magic: query WHY the counter has its current value
+print("\n=== Causality Chain ===")
+print(why(counter))
+
+// More complex state example
+print("\n=== Accumulator ===")
+state total = 0
+state i = 1
+
+while i <= 5 {
+    total -> total + i
+    i -> i + 1
+}
+
+print("Sum of 1 to 5:", total)
+print("\nTotal's history:")
+print(why(total))

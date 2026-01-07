@@ -1,0 +1,24 @@
+// closures.skyh - Demonstrating closures and state encapsulation
+// SkyHetu closures capture state explicitly
+
+fn make_counter(start) {
+    state count = start
+    
+    fn increment() {
+        count -> count + 1
+        return count
+    }
+    
+    return increment
+}
+
+let counter_a = make_counter(0)
+let counter_b = make_counter(100)
+
+print("Counter A:", counter_a())
+print("Counter A:", counter_a())
+print("Counter B:", counter_b())
+
+// Each closure has its own isolated state
+print("Final A:", counter_a())
+print("Final B:", counter_b())

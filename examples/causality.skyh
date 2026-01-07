@@ -1,0 +1,60 @@
+// Causality Demo in SkyHetu
+// Shows the unique 'why()' function that explains state history
+
+print("=== SkyHetu Causality Demo ===")
+print("Every state mutation is tracked automatically.\n")
+
+// Bank account simulation
+print("--- Bank Account Simulation ---")
+
+state balance = 1000
+print("Opening balance:", balance)
+
+// Deposits
+balance -> balance + 500
+print("Deposit $500:", balance)
+
+balance -> balance + 250
+print("Deposit $250:", balance)
+
+// Withdrawals
+balance -> balance - 100
+print("Withdraw $100:", balance)
+
+balance -> balance - 350
+print("Withdraw $350:", balance)
+
+// Interest
+balance -> balance * 1.05
+print("5% interest:", balance)
+
+// Query causality
+print("\n--- Transaction History (via why()) ---")
+print(why(balance))
+
+// Multiple state variables
+print("\n--- Multiple State Variables ---")
+
+state health = 100
+state score = 0
+
+// Game simulation
+score -> score + 10
+health -> health - 5
+score -> score + 25
+health -> health - 10
+health -> health + 20  // health pack!
+score -> score + 50
+
+print("Final score:", score)
+print("Final health:", health)
+
+print("\nScore history:")
+print(why(score))
+
+print("\nHealth history:")
+print(why(health))
+
+// Time-based introspection
+print("\n--- Logical Time ---")
+print("Current logical time:", time())
