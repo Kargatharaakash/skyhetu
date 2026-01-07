@@ -1,0 +1,8 @@
+:root {
+  --vp-nav-logo-height: 36px;
+}
+
+.VPNavBarTitle .logo {
+  height: 36px;
+  width: auto;
+}

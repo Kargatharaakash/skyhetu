@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/skyhetu/',
 
   head: [
-    ['link', { rel: 'icon', href: '/skyhetu/skyhetu_dark.png' }],
+    ['link', { rel: 'icon', href: '/skyhetu/skyhetu_light.png' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'SkyHetu - Causality-First Language' }],
     ['meta', { property: 'og:description', content: 'A programming language where every state mutation is tracked. Debug by asking "why?"' }],
@@ -22,8 +22,8 @@ export default defineConfig({
 
   themeConfig: {
     logo: {
-      light: '/skyhetu_light.png',
-      dark: '/skyhetu_dark.png'
+      light: '/skyhetu_dark.png',
+      dark: '/skyhetu_light.png'
     },
 
     siteTitle: 'SkyHetu',
