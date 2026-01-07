@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "SkyHetu",
   description: "A causality-first programming language",
+  base: '/skyhetu/',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
